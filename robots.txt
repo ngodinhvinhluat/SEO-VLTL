@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vltlthutuyet.io.vn/sitemap.xml

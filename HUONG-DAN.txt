@@ -1,0 +1,66 @@
+HƯỚNG DẪN ĐƯA TRANG LÊN MẠNG - vltlthutuyet.io.vn
+==================================================
+
+1. TRONG GÓI NÀY CÓ GÌ
+   index.html    Trang web chính (đã có sẵn thẻ SEO, dữ liệu có cấu trúc, form đặt lịch)
+   robots.txt    Cho Google biết được phép đọc trang
+   sitemap.xml   Sơ đồ trang để gửi Google
+   images/       Thư mục để bạn bỏ ảnh vào (xem mục 4)
+
+2. UPLOAD LÊN HOSTING
+   Cách A - Hosting thường (cPanel / DirectAdmin của PA Vietnam, Mắt Bão, Nhân Hòa, iNET...):
+     1) Giải nén file zip này trên máy tính.
+     2) Đăng nhập trang quản lý hosting > File Manager > mở thư mục public_html (hoặc thư mục gốc của tên miền).
+     3) Upload TOÀN BỘ nội dung đã giải nén: index.html, robots.txt, sitemap.xml và thư mục images.
+        Lưu ý: index.html phải nằm trực tiếp trong public_html, không nằm trong thư mục con.
+     4) Xóa file mặc định của hosting (ví dụ index.php, default.html) nếu có, để trang này hiển thị.
+
+   Cách B - Lưu trữ tĩnh miễn phí (Cloudflare Pages hoặc Netlify):
+     1) Tạo tài khoản, chọn tạo dự án mới bằng cách kéo thả thư mục đã giải nén.
+     2) Vào phần Custom domain, thêm vltlthutuyet.io.vn và làm theo hướng dẫn.
+
+3. TRỎ TÊN MIỀN VÀ BẬT HTTPS
+   - Ở trang quản lý tên miền, sửa DNS theo thông tin nhà hosting gửi (bản ghi A hoặc CNAME/nameserver).
+   - Chờ vài phút đến vài giờ để có hiệu lực.
+   - Bật chứng chỉ SSL (Let's Encrypt miễn phí) để địa chỉ có https://.
+   - Nếu muốn dùng cả có www và không www, chọn một địa chỉ chính và chuyển hướng địa chỉ còn lại về đó.
+     Trang đang khai báo địa chỉ chính là https://vltlthutuyet.io.vn/
+
+4. THÊM ẢNH (khuyến khích làm ngay)
+   Bỏ các ảnh sau vào thư mục images, đặt ĐÚNG tên:
+     chan-dung.jpg          Ảnh chân dung KTV, tỉ lệ dọc 4:5 (ví dụ 960x1200), nền sáng, nhìn thẳng ống kính
+     tri-lieu-tai-nha.jpg   Ảnh KTV đang trị liệu tại nhà cho khách, tỉ lệ 4:5
+     tre-em.jpg             Ảnh KTV tập cùng bé, có bố mẹ bên cạnh, tỉ lệ 4:5 (chỉ dùng khi phụ huynh đồng ý)
+     og-image.jpg           Ảnh hiện khi chia sẻ link lên Facebook/Zalo, kích thước 1200x630
+   Nên nén mỗi ảnh dưới khoảng 300 KB để trang tải nhanh trên điện thoại.
+   Nếu chưa có ảnh: trang hero hiển thị chữ "TT", hai khối ảnh còn lại sẽ tự ẩn, không bị lỗi.
+
+5. LÀM CHO FORM ĐẶT LỊCH NHẬN ĐƯỢC THÔNG TIN
+   Mặc định, khi khách bấm gửi, trang mở ứng dụng email với nội dung điền sẵn gửi tới nguyenthithutuyet96@gmail.com.
+   Để nhận thông tin trực tiếp vào email mà khách không phải mở ứng dụng:
+     1) Tạo form miễn phí tại formspree.io (hoặc dùng Google Apps Script ghi vào Google Sheet).
+     2) Copy đường dẫn nhận dữ liệu (dạng https://formspree.io/f/xxxxxxx).
+     3) Mở index.html bằng Notepad, tìm dòng:   var FORM_ENDPOINT='';
+        dán đường dẫn vào giữa hai dấu nháy, lưu file và upload lại.
+   Các nút "Gọi ngay" và "Nhắn Zalo" hoạt động độc lập, không cần cấu hình.
+
+6. SAU KHI TRANG ĐÃ LÊN MẠNG
+   - Mở trang trên điện thoại, thử: bấm gọi, bấm Zalo, xem video, gửi form.
+   - Đăng ký Google Search Console (search.google.com/search-console), thêm vltlthutuyet.io.vn
+     và gửi sitemap: https://vltlthutuyet.io.vn/sitemap.xml
+   - Lập Google Business Profile cho dịch vụ tại nhà, khu vực phục vụ TP. Hồ Chí Minh.
+   - Đưa link trang vào Facebook, TikTok, YouTube và mô tả video VTV9 của bạn.
+
+7. NỘI DUNG CẦN CẬP NHẬT SAU (mở index.html bằng Notepad hoặc nhờ mình chỉnh)
+   - Giá các gói (hiện ghi "Liên hệ báo giá").
+   - Lời cảm nhận thật của khách (có khối ghi chú sẵn ở phần trước mục "Câu hỏi thường gặp").
+   - Tên trường Y Dược, tên và năm cấp chứng chỉ chuyên môn.
+   - Link Facebook/TikTok, các báo hoặc kênh khác đã đưa tin.
+   - Số khách đã đồng hành, điểm đánh giá (chỉ thêm khi có số liệu thật).
+
+8. XÁC NHẬN LẠI TRƯỚC KHI CÔNG KHAI
+   - Số 0386 418 969 có dùng cho Zalo không (nút Nhắn Zalo đang mở zalo.me/0386418969).
+   - Tên phòng khám "ACC" có đúng chính tả không.
+   - Số năm kinh nghiệm (7 năm, tính từ 2019) có đúng thực tế không.
+   - Danh sách vấn đề ở trẻ em và mô tả cách làm việc với bé có đúng với phạm vi bà nhận không.
+   - Ảnh trẻ em chỉ đăng khi có sự đồng ý của phụ huynh.
